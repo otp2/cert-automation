@@ -1,4 +1,4 @@
-#CEU Certificate Generator
+# CEU Certificate Generator
 
 **Production-ready system for bulk-generating branded PDF CEU certificates from CSV attendee data.**
 
