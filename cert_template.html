@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+<style type="text/css">
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+}
+.certificate-wrapper {
+    padding: 30px 15px;
+    background-color: #f0f0f0;
+}
+.certificate-container {
+    border: 6px solid #003366;
+    padding: 30px 45px;
+    max-width: 780px;
+    min-height: 580px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+.logo {
+    max-width: 180px;
+    margin-bottom: 25px;
+    margin-top: 5px;
+}
+.header {
+    font-family: Arial Black, Gadget, sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: #003366;
+    margin-bottom: 35px;
+    letter-spacing: 1.5px;
+}
+.attendee-name {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 30px 0 5px 0;
+    color: #B85C00;
+}
+.attendee-credentials {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    color: #444444;
+}
+.completion-text {
+    margin-bottom: 15px;
+    font-size: 13px;
+    font-weight: bold;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.event-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 25px 0;
+    color: #003366;
+}
+.event-date {
+    margin-bottom: 35px;
+    font-size: 15px;
+    color: #333333;
+}
+.confirmation-text {
+    text-align: left;
+    margin-bottom: 25px;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #333333;
+}
+.footer-info {
+    font-size: 9px;
+    margin-top: 35px;
+    text-align: left;
+    color: #333333;
+}
+.footer-info strong {
+    font-size: 9px;
+    font-weight: bold;
+    color: #000000;
+}
+.ceu-table {
+    width:100%;
+    font-size: 8px;
+    border-collapse: collapse;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #999999;
+}
+.ceu-table th, .ceu-table td {
+    border: 1px solid #999999;
+    padding: 3px 5px;
+    text-align: left;
+    vertical-align: top;
+}
+.ceu-table th {
+    background-color: #E5E5E5;
+    font-weight: bold;
+    color: #000000;
+}
+.granted-by {
+    margin-top: 15px;
+    line-height: 1.3;
+    font-size: 9px;
+    font-weight: bold;
+    color: #000000;
+}
+.granted-by span {
+    font-weight: normal;
+    display: block;
+}
+@media print {
+    .certificate-wrapper {
+        padding: 0;
+        background-color: #ffffff;
+    }
+    .certificate-container {
+        border: 6px solid #003366;
+        max-width: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 10mm 15mm;
+        box-shadow: none;
+        min-height: 0;
+    }
+    @page {
+        size: 8.5in 11in;
+        margin: 0;
+    }
+}
+</style>
+</head>
+<body>
+<div class="certificate-wrapper">
+<div class="certificate-container">
+    <img alt="Endeavor Health Logo" class="logo" src="https://image.info.endeavor.health/lib/fe3a15707564077d7d1075/m/1/b5739a1c-cd88-45af-90b6-23f4c64720e4.jpg">
+    <div class="header">CERTIFICATE OF ATTENDANCE</div>
+    <div class="attendee-name">{{ FirstName }} {{ LastName }}</div>
+    {% if Credentials %}
+    <div class="attendee-credentials">{{ Credentials }}</div>
+    {% endif %}
+    <div class="completion-text">SUCCESSFULLY COMPLETED A CONTINUING EDUCATION WEBINAR / SEMINAR</div>
+    <div class="event-title">{{ EventTitle }}</div>
+    <div class="event-date">{{ EventDate }}</div>
+    <div class="confirmation-text">
+        This letter is to confirm that the above attendee has completed 3 hours of: {{ EventTitle }}.<br><br>
+        Linden Oaks at Edward is accredited by the Illinois Department of Financial &amp; Professional Regulation (IDFPR). Linden Oaks at Edward complies with the IDFPR Standard. As a result of this accreditation, Linden Oaks at Edward is authorized to issue the IDFPR CEU.
+    </div>
+    <div class="footer-info">
+        <strong>CONTINUING EDUCATION UNIT INFORMATION:</strong>
+        <table class="ceu-table">
+            <thead>
+                <tr>
+                    <th>Licensure(s):</th>
+                    <th>Sponsor Identification Number(s):</th>
+                    <th>Credit Hours</th>
+                </tr>
+            </thead>
+            <tr>
+                <td>Department of Professional Regulation Social Worker</td><td>159-001073</td><td>3.0</td>
+            </tr>
+            <tr>
+                <td>Department of Professional Regulation Professional Counselor/Clinical Counselor</td><td>197-000170</td><td>3.0</td>
+            </tr>
+            <tr>
+                <td>Department of Professional Regulation Marriage and Family Therapist</td><td>168-000194</td><td>3.0</td>
+            </tr>
+            <tr>
+                <td>Department of Professional Regulation Psychologist</td><td>268-000012</td><td>3.0</td>
+            </tr>
+        </table>
+        <div class="granted-by">
+            GRANTED BY: KELLY RYAN PsyD<br>
+            <span>System Director Mental Health Clinical and Quality Transformation<br>
+            Endeavor Health Linden Oaks Hospital<br>
+            852 S. West Street Naperville, IL 60540<br>
+            <a href="mailto:behavioralhealth@endeavorhealth.org" style="text-decoration:none;">behavioralhealth@endeavorhealth.org</a></span><br>&nbsp;
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html> 
