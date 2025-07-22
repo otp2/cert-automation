@@ -1,20 +1,20 @@
-# 🏥 CEU Certificate Generator
+#CEU Certificate Generator
 
 **Production-ready system for bulk-generating branded PDF CEU certificates from CSV attendee data.**
 
 Perfect for healthcare organizations, training providers, and continuing education programs. Generates professional certificates with consistent branding and proper naming conventions.
 
-## ✨ Features
+## Features
 
-- 🚀 **Bulk Generation** - Process hundreds of certificates in minutes
-- 🎨 **Professional Templates** - Healthcare-grade branded certificates  
-- 📁 **Smart Organization** - Auto-creates folders by event name/date
-- 🔧 **Easy Customization** - Simple HTML/CSS template editing
-- 📊 **CSV Integration** - Works with Salesforce exports and standard CSV
-- ✅ **Error Handling** - Validates data and reports issues clearly
-- 🖥️ **Cross Platform** - Windows, Mac, Linux support
+- **Bulk Generation** - Process hundreds of certificates in minutes
+- **Professional Templates** - Healthcare-grade branded certificates  
+- **Smart Organization** - Auto-creates folders by event name/date
+- **Easy Customization** - Simple HTML/CSS template editing
+- **CSV Integration** - Works with Salesforce exports and standard CSV
+- **Error Handling** - Validates data and reports issues clearly
+- **Cross Platform** - Windows, Mac, Linux support
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Clone & Setup
 ```bash
@@ -63,15 +63,15 @@ python generate_certs.py --csv your_event.csv
 
 Your CSV must include these columns (Salesforce export format supported):
 
-| Column | Required | Description |
-|--------|----------|-------------|
+| Column | Description |
+|---------------------|
 | `SubscriberKey` | Optional | Duplicate of EmailAddress (Salesforce format) |
-| `EmailAddress` | ✅ | Attendee email address |
-| `FirstName` | ✅ | Attendee first name |
-| `LastName` | ✅ | Attendee last name |
+| `EmailAddress` | Attendee email address |
+| `FirstName` | Attendee first name |
+| `LastName` | Attendee last name |
 | `Credentials` | Optional | Professional credentials (LCSW, PhD, etc.) |
-| `EventTitle` | ✅ | Name of the event/training |
-| `EventDate` | ✅ | Date of the event |
+| `EventTitle` | Name of the event/training |
+| `EventDate` | Date of the event |
 
 ### Example CSV:
 ```csv
@@ -79,7 +79,7 @@ SubscriberKey,EmailAddress,FirstName,LastName,Credentials,EventTitle,EventDate
 jane.doe@email.com,jane.doe@email.com,Jane,Doe,LCSW,"Mental Health Training","January 17 2025"
 ```
 
-## 📁 Output Structure
+## Output Structure
 
 ```
 output/
@@ -89,7 +89,7 @@ output/
     └── ...
 ```
 
-## 🎨 Customizing Templates
+## Customizing Templates
 
 1. Edit `cert_template.html` to modify the certificate design
 2. Uses Jinja2 templating:
@@ -128,7 +128,7 @@ python generate_certs.py --csv feb_event.csv
 # Each gets its own output folder automatically
 ```
 
-## 🔨 Development
+##  Development
 
 ### Project Structure
 ```
@@ -148,7 +148,7 @@ cert-automation/
 - wkhtmltopdf
 - pandas, jinja2, pdfkit (installed via requirements.txt)
 
-## 🚨 Troubleshooting
+## Troubleshooting
 
 **"wkhtmltopdf not found"**
 - Ensure wkhtmltopdf is installed and in PATH
@@ -165,7 +165,7 @@ cert-automation/
 **Virtual environment issues**
 - Always activate venv before running: `.\.venv\Scripts\Activate.ps1`
 
-## 📋 For Regular Use
+## For Regular Use
 
 ### Every New Event:
 1. **Activate environment:** `.\.venv\Scripts\Activate.ps1`
@@ -174,16 +174,16 @@ cert-automation/
 4. **Find PDFs** in `output/[EventName]/`
 
 ### Tips:
-- 🧪 Test with 2-3 attendees first
-- 📝 Keep event titles in quotes if they contain commas
-- 🗂️ Each event gets its own folder automatically
-- 💾 Backup your templates before major changes
+- Test with 2-3 attendees first
+- Keep event titles in quotes if they contain commas
+- Each event gets its own folder automatically
+- Backup your templates before major changes
 
-## 📄 License
+## License
 
 MIT License - see LICENSE file for details
 
-## 🤝 Contributing
+##  Contributing
 
 1. Fork the repository
 2. Create a feature branch
